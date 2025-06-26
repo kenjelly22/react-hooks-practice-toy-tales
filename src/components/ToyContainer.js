@@ -1,7 +1,7 @@
 import React, {useEffect} from "react"
 import ToyCard from "./ToyCard"
 
-function ToyContainer({toys, setToys}) {
+function ToyContainer({toys, setToys, onDelete}) {
   useEffect(() => {
     fetch("http://localhost:3001/toys")
       .then((r) => r.json())
@@ -11,7 +11,7 @@ function ToyContainer({toys, setToys}) {
   return (
     <div id="toy-collection">
       {toys.map((toy) => (
-        <ToyCard key={toy.id} toy={toy} />
+        <ToyCard key={toy.id} toy={toy} onDelete={onDelete} />
       ))}
     </div>
   )
