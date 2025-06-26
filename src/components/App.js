@@ -12,10 +12,16 @@ function App() {
     setShowForm((showForm) => !showForm)
   }
 
+  const handleSubmit = (newToy) => {
+    setToys([...toys, newToy])
+  }
+
   return (
     <>
       <Header />
-      {showForm ? <ToyForm /> : null}
+      {showForm ? (
+        <ToyForm toys={toys} setToys={setToys} onSubmit={handleSubmit} />
+      ) : null}
       <div className="buttonContainer">
         <button onClick={handleClick}>Add a Toy</button>
       </div>
