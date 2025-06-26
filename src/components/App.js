@@ -21,16 +21,26 @@ function App() {
     setToys(updatedToys)
   }
 
+  const handleLikes = (updatedToy) => {
+    const updatedToys = toys.map((toy) =>
+      toy.id === updatedToy.id ? updatedToy : toy
+    )
+    setToys(updatedToys)
+  }
+
   return (
     <>
       <Header />
-      {showForm ? (
-        <ToyForm toys={toys} setToys={setToys} onSubmit={handleSubmit} />
-      ) : null}
+      {showForm ? <ToyForm onSubmit={handleSubmit} /> : null}
       <div className="buttonContainer">
         <button onClick={handleClick}>Add a Toy</button>
       </div>
-      <ToyContainer toys={toys} setToys={setToys} onDelete={handleDelete} />
+      <ToyContainer
+        toys={toys}
+        setToys={setToys}
+        onDelete={handleDelete}
+        onLike={handleLikes}
+      />
     </>
   )
 }

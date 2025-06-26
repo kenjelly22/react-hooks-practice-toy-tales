@@ -27,8 +27,8 @@
     {
       "id": 5,
       "name": "Rex",
-      "image": "https://static.wikitide.net/greatcharacterswiki/thumb/a/a8/Rex_%28Toy_Story%29.png/542px-Rex_%28Toy_Story%29.png?20240821184912",
-      "likes": 1
+      "image": "https://media1.tenor.com/m/5NV8_C-_46gAAAAC/t-rex.gif",
+      "likes": 4
     },
     {
       "id": 6,
@@ -41,6 +41,12 @@
       "name": "Hamm",
       "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
       "likes": 0
+    },
+    {
+      "id": 8,
+      "name": "Little Green Men",
+      "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
+      "likes": -2
     }
   ]
 }

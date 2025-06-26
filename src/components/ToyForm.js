@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-function ToyForm({toys, setToys, onSubmit}) {
+function ToyForm({onSubmit}) {
   const [newToy, setNewToy] = useState({
     name: "",
     image: "",
