@@ -19,7 +19,16 @@ function ToyForm({toys, setToys, onSubmit}) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit(newToy)
+
+    fetch("http://localhost:3001/toys", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newToy),
+    })
+      .then((r) => r.json())
+      .then((newToy) => onSubmit(newToy))
   }
 
   return (
